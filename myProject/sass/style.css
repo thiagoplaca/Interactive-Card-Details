@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.main-container {
+  width: 375px;
+  margin: auto;
+}
+.main-container_background-section {
+  background-image: url(../images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  height: 240px;
+  position: relative;
+}
+.main-container_form-section {
+  padding: 90px 24px 45px;
+}
+@media (min-width: 1440px) {
+  .main-container {
+    width: 1440px;
+    display: flex;
+  }
+  .main-container_background-section {
+    background-image: url(../images/bg-main-desktop.png);
+    width: 900px;
+    height: 900px;
+  }
+}
+
+.card {
+  width: 288px;
+  height: 160px;
+  padding: 20px;
+  color: hsl(0deg, 0%, 100%);
+  background-image: url("../images/bg-card-front.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 120px;
+  left: 18px;
+  position: absolute;
+  z-index: 1;
+  letter-spacing: 2px;
+}
+@media (min-width: 1440px) {
+  .card {
+    width: 445px;
+    height: 245px;
+    padding: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .card {
+    top: 185px;
+    left: 165px;
+  }
+}
+.card_logo {
+  width: 32px;
+}
+.card_number {
+  margin: 30px 0 30px 0;
+}
+.card_details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+@media (min-width: 1440px) {
+  .card_logo {
+    width: 85px;
+  }
+  .card_number {
+    font-size: 1.6rem;
+    margin: 50px 0 50px 0;
+  }
+  .card_details {
+    font-size: 0.8rem;
+  }
+}
+
+.card_back {
+  width: 288px;
+  height: 160px;
+  padding: 20px;
+  color: hsl(0deg, 0%, 100%);
+  background-image: url("../images/bg-card-back.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 30px;
+  left: 75px;
+  position: absolute;
+  letter-spacing: 2px;
+}
+@media (min-width: 1440px) {
+  .card_back {
+    width: 445px;
+    height: 245px;
+    padding: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .card_back {
+    top: 470px;
+    left: 260px;
+  }
+}
+.card_back_cvc {
+  font-size: 0.7rem;
+  margin-top: 50px;
+  text-align: right;
+  padding-right: 10px;
+}
+@media (min-width: 1440px) {
+  .card_back_cvc {
+    font-size: 1em;
+    margin-top: 78px;
+    padding-right: 20px;
+  }
+}
+
+.form {
+  display: block;
+}
+.form_label {
+  text-transform: uppercase;
+  font-size: 0.65em;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 8px;
+  color: hsl(278deg, 68%, 11%);
+  font-weight: bold;
+}
+.form_input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  font-family: "Space Grotesk", sans-serif;
+  padding-left: 10px;
+  font-size: 1em;
+  outline: none;
+}
+.form_input::-moz-placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+.form_input:-ms-input-placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+.form_input::placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+.form_date-cvc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 6px;
+}
+.form_date {
+  display: flex;
+  gap: 10px;
+}
+.form_submit, .thanks-section_button {
+  background-color: hsl(278deg, 68%, 11%);
+  color: hsl(0deg, 0%, 100%);
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-family: "Space Grotesk", sans-serif;
+}
+.form_submit:hover, .thanks-section_button:hover {
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  .form {
+    width: 385px;
+    margin-top: 180px;
+  }
+  .form_input {
+    margin-bottom: 40px;
+  }
+}
+
+.error {
+  color: hsl(0deg, 100%, 66%);
+  margin: -10px 0 18px;
+  font-size: 0.6em;
+}
+
+.form_errors-container {
+  display: flex;
+  gap: 5px;
+}
+
+.form_errors-container div {
+  width: 100px;
+  text-align: center;
+  margin-left: -7px;
+}
+
+.thanks-section {
+  display: none;
+}
+.thanks-section_img {
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.thanks-section_title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: hsl(278deg, 68%, 11%);
+  margin-bottom: 20px;
+}
+.thanks-section_text {
+  text-align: center;
+  color: hsl(279deg, 6%, 55%);
+  font-size: 1.1em;
+  margin-bottom: 40px;
+}
+@media (min-width: 1440px) {
+  .thanks-section {
+    margin-top: 180px;
+  }
+}
+
+.attribution {
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+  bottom: 30px;
+  left: 20px;
+}/*# sourceMappingURL=style.css.map */
